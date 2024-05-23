@@ -1,0 +1,92 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#botoes{
+   margin-right: 50px;
+}
+a{
+    text-align: center;
+}
+button{
+    width: 200px;
+    height: 50px;
+    border-radius: 15px;
+    margin-right: 20px;
+    text-align: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.foto{
+    float: left;
+    margin-bottom: 100px;
+    margin-left: 15px;
+}
+.foto img{
+    margin-top: 15px;
+    border-radius: 15px;
+}
+.quemsou{
+    margin-left: 30px;
+    float: left;
+    word-wrap: break-word;
+    width: 300px;
+    height: 20px;
+}
+.carreira{
+    margin-left: 120px;
+    float: left;
+    word-wrap: break-word;
+    width: 300px;
+    height: 20px;
+}
+.voluntario{
+    margin-left: 100px;
+    float: left;
+    word-wrap: break-word;
+    width: 300px;
+    height: 50px;
+}
+.imagem1{
+    clear: both;
+    float: left;
+    margin-left: 300px;
+    margin-bottom: 15px;
+    border-radius: 15px;
+}
+.imagem2{
+    float: left;
+    margin-left: 10px;
+    margin-bottom: 15px;
+    
+}
+#Instagram{
+background-image: linear-gradient(rgb(251,150,24), rgb(243,4,5), rgb(202,0,127));
+}
+#Linkedin{
+background-image: linear-gradient(rgb(9, 107, 199), white);
+}
+#Lattes{
+background-image: linear-gradient(black,white);
+}
+body{
+    background-attachment: fixed;
+    background-image: linear-gradient(#9a69dd,#2a65db,#9a69dd);
+}
+#cabecalho{
+    display: flexbox;
+}
+#meio{
+    display: flexbox;
+}
+#fim{
+    display: flex-blox;
+}
+li{
+    list-style-type: upper-roman;
+}
+*{
+    font-family: 'Times New Roman', Times, serif;
+}

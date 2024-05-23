@@ -1,0 +1,120 @@
+
+
+body {
+   background-size: cover;
+   background-attachment: fixed;
+}
+
+.paragrafo {
+    text-align: justify;
+    text-indent: 40px;
+}
+
+.borda {
+    border-radius: 10px;
+}
+
+.site {
+    display: flex;
+    flex-direction: column;
+
+    width: 700px;
+
+    margin-left: auto;
+    margin-right: auto;   
+    min-height: auto;
+}
+
+.header{
+    background-color: rgb(40, 54, 66);
+    color: white;
+    text-align: center;
+    height: auto;
+
+    font-weight: bold;
+    font-size:x-large;
+}
+
+.academico * {
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+}
+
+.about {
+    border: 2px solid rgb(255, 255, 255);
+    background-color: rgb(109, 108, 111);
+}
+
+.borda-hidden {
+    border-radius: 10px; 
+    overflow: hidden;
+}
+
+.AnularMargem {
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+}
+
+.RemoverNegrito {
+    font-weight: lighter;
+}
+
+.FlexSpaceBetween {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.FlexColumnSpaceBetween {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.itens-about{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: black;
+}
+
+.botoes {
+    display: flex;
+    align-content: space-around;
+}
+
+.botoes div{
+    background-color: rgb(40, 54, 66);
+    border: 2px solid white;
+    border-radius: 10px;
+    text-align: center;
+    width: 233px;
+}
+
+* a, a:visited{
+    color: white;
+    text-decoration: none;
+}
+
+.Interesses {
+    display: flex;
+    flex-direction: row;
+}
+
+.Interesses ul{
+    width: 200px;
+}
+
+.Interesses ul li {
+    font-size: x-large;
+}
+
+.itens-filantropia {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.Hobbies {
+    color: white;
+}

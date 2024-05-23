@@ -1,0 +1,289 @@
+*{
+    margin: 0em;
+    padding: 0em;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f5f5f5;
+    font-family: Arial, sans-serif; /* Adicione uma fonte padrão */
+}
+
+.paragrafo {
+    text-align: justify;
+    text-indent: 40px;
+    font-size: 25px;
+}
+
+.borda-hidden {
+    border-radius: 10px; 
+    overflow: hidden;
+}
+
+.AnularMargem {
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+}
+
+.RemoverNegrito {
+    font-weight: lighter;
+}
+
+.FlexSpaceBetween {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.FlexSpaceAround {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.FlexColumnSpaceBetween {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+* a, a:visited{
+    color: black;
+    text-decoration: none;
+}
+/* Classes secundarias acima, para melhor localizaçao usar daqui para baixo*/
+
+.site {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto; 
+    max-width: 100%; /* Defina uma largura máxima para evitar que o conteúdo fique muito largo em telas grandes */
+    padding-left: 200px;
+    padding-right: 200px;
+    border: 2px solid rgb(0, 0, 0);
+}
+
+.Header {
+    height: 150px;
+    display: flex;
+    align-items: center;
+    border: 2px solid rgb(0, 0, 0);
+}
+
+.Botoes-Principais div {
+    border: 2px solid black;
+    text-align: center;
+    width: 33.33%; /* para evitar problemas com espaçamentos */
+    margin: 5px; /* Adicione um espaçamento entre os botões */
+    padding: 10px;
+    background-color: #008cff93; /* Adicione uma cor de fundo */
+    cursor: pointer; /* Mude o cursor ao passar o mouse */
+}
+
+.Menu-Conteudo {
+    border: 1px solid rgb(0, 0, 0);
+}
+
+.Menu {
+    width: 20%;
+    height: 600px; /* Reduza a altura para um tamanho mais gerenciável */
+    border: 2px solid rgb(0, 0, 0);
+    padding: 10px;
+    background-color: #008cff93;
+}
+
+.Menu-texto {
+    height: auto;
+    overflow: auto;
+}
+
+.menu-texto-links{
+    font-size: 20px;
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+
+.Conteudo {
+    width: 80%;
+    height: 600px; /* Ajuste a altura para corresponder ao menu */
+    overflow-y: auto;
+    border: 2px solid rgb(0, 0, 0);
+    padding: 10px;
+    
+} 
+
+.Voltar {
+    border: 2px solid rgb(0, 0, 0);
+    position: sticky;
+    margin: 0 auto;
+    padding-left: 5vh;
+    padding-right: 5vh;
+}
+
+.Footer {
+    /*width: 100%; Remover por causa de espaço a mais*/
+    height: 150px;
+    border: 3px solid black;
+    background-color: #63c44f;
+}
+
+.Botoes-Footer div {
+    border: 2px solid black;
+    border-radius: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    background-color: white;
+}
+
+.form {
+    text-align: center;
+}
+
+/*CSS TABELA*/
+.centro {
+    text-align: center;
+    font-size: xx-large;
+}
+
+.alinha {
+    width: 500px;
+    margin: 0 auto;
+}
+
+td,th {
+    border-top: 3px solid red;
+    border-left: 3px solid yellow;
+    border-right: 3px solid orange;
+    border-bottom: 3px solid green;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(157, 147, 139);
+}
+
+.espaco {
+    border-spacing: 7px;
+}
+/*FIM CSS TABELA*/
+
+
+/*CSS DO FORMULARIO*/
+.evento{
+    background-color: #008cff93;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    border-radius: 10px;
+    width: 57.79%;
+    padding: 5px; /* Adicione espaçamento interno */
+}
+hr{
+    background-color: black;
+}
+.p0, .p1, .p2, .p3{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: auto;
+}
+.p1{
+    margin-top: 15px;
+    margin-left: 15px;
+}
+.p2{
+    margin-left: 15px;
+}
+.p3{
+    margin-left: 32px;
+}
+.p4{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: auto;
+    margin-right: 75px;
+}
+.pnome{
+    margin-right: 50px;
+}
+.ptel{
+    margin-right: 50px;
+}
+.e0, .e1, .e2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: auto;
+}
+.e0{
+    margin-top: 25px;
+    margin-left: 15px;
+}
+.e1{
+    margin-top: 25px;
+    margin-left: 75px;
+}
+.e2{
+    margin-top: 25px;
+    margin-left: 30px;
+}
+#rua{
+    width: 340px;
+}
+.ecid{
+    margin-right: 50px;
+}
+.ecep{
+    margin-right: 50px;
+}
+.part0, .part1, .part2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: auto;  
+}
+.part0{
+    margin-top: 25px;
+    margin-left: 15px;
+}
+.part1{
+    margin-top: 25px;
+    margin-right: 110px;
+}
+.part2{
+    margin-right: 150px;
+}
+.buttons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;   
+    margin-bottom: 50px;
+}
+#b0, #b1{
+    width: 250px;
+    border: solid #E9EDF1;
+    border-radius: 2px;
+    padding: 1px;
+    cursor: pointer;
+}
+input[type="text"]{
+    margin-left: 15px;
+    border: solid #E9EDF1;
+    border-radius: 10px;
+}
+input[type="radio"]{
+    margin-left: 15px;
+    border: solid #E9EDF1;
+    border-radius: 10px;
+}
+input[type="file"]{
+    margin-left: 15px;
+}   
+input[type="tel"]{
+    border: solid #E9EDF1;
+    border-radius: 10px;
+}
+
+/*FIM DO CSS DO FORMULARIO*/

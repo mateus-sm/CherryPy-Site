@@ -1,0 +1,500 @@
+
+            <div class="Menu-Conteudo FlexSpaceBetween">
+                <div class="Menu FlexColumnSpaceBetween">
+                    <div class="Menu-texto">
+                        <p class="menu-texto-links" style="text-decoration: underline; text-align: center;">Tópicos</p>
+                        <h2 class="AnularMargem menu-texto-links"><a href="#conceitos">☆  Conceitos</a></h2>
+                        <h2 class="AnularMargem menu-texto-links"><a href="#formatação">☆  Formatação</a></h2>
+                        <h2 class="AnularMargem menu-texto-links"><a href="#imagens">☆  Imagens</a></h2>
+                        <h2 class="AnularMargem menu-texto-links"><a href="#listas">☆  Listas</a></h2>
+                        <h2 class="AnularMargem menu-texto-links"><a href="#tabelas">☆  Tabelas</a></h2>
+                        <h2 class="AnularMargem menu-texto-links"><a href="#links">☆  Links</a></h2>
+                        <h2 class="AnularMargem menu-texto-links"><a href="#tableless">☆  Tableless</a></h2>
+                        <h2 class="AnularMargem menu-texto-links"><a href="#flexbox">☆  Flexbox</a></h2>
+                        <h2 class="AnularMargem menu-texto-links"><a href="#formulários">☆  Formulários</a></h2> 
+                    </div>
+                    <div class="Voltar" style="background-color: #ffffff;">
+                        <h2 class="AnularMargem"><a href="/">Voltar</a></h2>
+                    </div>
+                </div>
+
+            <div class="Conteudo">
+                <br>
+                <p style="font-weight: bold; font-size: 30px; text-indent: 40px" id="conceitos">
+                    Conceitos
+                </p>
+                <br>
+                <p class="paragrafo" style="font-weight: bold;">
+                    Introdução
+                </p>
+                <p class="paragrafo">
+                    As tags HTML são rótulos, marcações ou elementos que indicam ao navegador como o conteúdo deve ser apresentado, desenhado e renderizado pelo navegador. As tags têm o mesmo formato: começam com um sinal de menor "<" e acabam com um sinal demaior ">", e normalmente vêm em pares,
+                    como < nometag> e < /nometag>.
+                </p>
+                <br>
+                <p class="paragrafo" style="font-weight: bold;">
+                    Tag
+                </p>
+                <p class="paragrafo">
+                    As tags podem ser aninhadas dentro de outras tags. Exemplo: < i>< b>Texto< /b>< /i> (< i>< b>Texto< /i>< /b> - errado!). Além das tags de pares existem as tags órfãs, ou seja, não possuem um par para fechá-las. Exemplos: < br /> < hr /> < img/>
+                </p>
+                <br>
+                <p class="paragrafo" style="font-weight: bold;">
+                Atributos
+                </p>
+                <p class="paragrafo">
+                    Algumas tags apresentam atributos, que são informações adicionais sobre as tags. Um exemplo é a tag para definição de hiperlinks, < a>, que possui o atributo href e tem como valor o endereço de destino. Exemplo: < a href="http://www.unoeste.br"><a style="color:blue;
+                    text-decoration:underline;" href="http://www.unoeste.br">Clique aqui</a>< /a>
+                </p>
+                <br>
+                <p class="paragrafo" style="font-weight: bold;">  
+                Seção Head
+                </p>
+                <p class="paragrafo">
+                    A seção head (cabeçalho) contém informações sobre o título do documento e meta tags. O par de tag < title> … < /title> define o título da página (visualizado na barra de título do navegador).
+                </p>
+                <br>
+                <p style="font-weight: bold; font-size: 30px; text-indent: 40px" id="formatação">
+                    Formatação
+                </p>
+                <br>
+                <p class="paragrafo" style="font-weight: bold;">
+                    Fontes
+                </p>
+                <p class="paragrafo">
+                    font-size: Define o tamanho da fonteatravés de unidades de medidas ouatravés das palavras-chave: <span style="font-size: xx-small;">xx-small  </span><span style="font-size: x-small;">x-small  </span><span style="font-size: small;">small  </span><span style="font-size: medium;">medium  </span><span style="font-size: normal;">normal  </span><span style="font-size: large;">large  </span><span style="font-size: x-large;">x-large  </span><span style="font-size: xx-large;">xx-large</span>
+
+                    <p class="paragrafo">  font-family: <span style="font-family: fantasy;">Define a família de fontes</span></p>
+
+                    <p class="paragrafo">  font-style: Define a inclinação da fonte, sendo ospossível valores: normal, <span style="font-style: italic;">italic</span> e <span style="font-style: oblique;">oblique</span>.</p>
+
+                    <p class="paragrafo">  font-weight: Define a quantidade de negrito a seraplicado aos caracteres. Possíveis valores: <span style="font-weight: lighter;">Lighter </span><span style="font-weight: normal;">Normal </span><span style="font-weight: bold;">Bold </span><span style="font-weight: bolder;">Bolder </span><span style="font-weight: 100;">100 </span><span style="font-weight: 200;">200 </span><span style="font-weight: 300;">300 </span><span style="font-weight: 400;">400 </span><span style="font-weight: 500;">500 </span><span style="font-weight: 600;">600 </span><span style="font-weight: 700;">700 </span><span style="font-weight: 800;">800 </span><span style="font-weight: 900;">900</span>.
+                </p>
+                <br>
+                <p class="paragrafo" style="font-weight: bold;">
+                    Alinhamento
+                </p>
+                <p class="paragrafo">
+                    text-align: Permite alinhar o texto de um bloco à 
+                    <p style="text-align: left;">Esquerda</p>
+                    <p style="text-align: right;">Direita</p>
+                    <p style="text-align: center;">Centralizado</p>
+                    <p style="text-align: justify;">Justificado</p>
+                </p>
+                <br>
+                <p class="paragrafo" style="font-weight: bold;">
+                    Decoração
+                </p>
+                <p class="paragrafo">
+                    text-decoration: Decora o texto com possíveis valores:
+                </p>
+                <p class="paragrafo">
+                    none: texto normal, sem nenhum efeito especial. Este é o valor padrão.
+                </p>
+                <p class="paragrafo">
+                    underline: <span style="text-decoration: underline;">Texto Sublinhado</span><br><br>
+                </p>
+                <p class="paragrafo">
+                    overline: <span style="text-decoration: overline;">Ao contrário do texto sublinhado, uma linha é traçada acima do mesmo.</span><br>
+                </p>
+                <p class="paragrafo">
+                    line-through: <span style="text-decoration: line-through;">Texto riscado, ou seja, uma linha étraçada no meio do texto.</span><br>
+                </p>
+                <br>
+                <p class="paragrafo" style="font-weight: bold;">
+                    Transformação
+                </p>
+                <p class="paragrafo">
+                    text-transform: Esta propriedade afeta acaixa das letras no texto com possíveis valores:
+                </p>
+                <p class="paragrafo">
+                    capitalize: <span style="text-transform: capitalize;">a primeira letra de cada palavra é transformada para maiúscula.</span><br>
+                </p>
+                <p class="paragrafo">
+                    uppercase: <span style="text-transform: uppercase;">todas as letras do texto são transformadas para maiúsculas.</span><br> 
+                </p>
+                <p class="paragrafo">
+                    lowercase: <span style="text-transform: lowercase;">todas as letras são transformadas para minúsculas.</span><br> 
+                </p>
+                <br>
+                <p class="paragrafo" style="font-weight: bold;">
+                    Outras formatações
+                </p>
+                <p class="paragrafo">
+                    letter-spacing: Espaçamento entre caracteres: <span style="letter-spacing: normal;">Normal </span><span style="letter-spacing: 5px;">Aumentado </span><span style="letter-spacing: -2px;">Diminuído</span>.
+                </p>
+                <p class="paragrafo">
+                    line-height: <span style="line-height: 2em;">Altura da linha</span>.
+                </p>
+                <p class="paragrafo">
+                    text-indent: <p style="text-indent: 2em;">Este parágrafo tem um recuo de 2em.</p>
+                </p>
+                <p class="paragrafo">
+                    direction: <p dir="rtl">Direcionando o texto para esquerda/direita -> Este texto está escrito da direita para a esquerda.</p>
+                </p>
+                <br>
+                <p class="paragrafo" style="font-weight: bold;">
+                    Sombra
+                </p>
+                <p class="paragrafo">
+                    text-shadow: <span style="text-shadow: 1px 1px 2px red;">É possível colocar sombra em texto.</span>
+                </p>
+                <br>
+                <p style="font-weight: bold; font-size: 30px; text-indent: 40px" id="imagens">
+                    Imagens
+                </p> <br>
+                <p class="paragrafo" style="font-weight: bold;">
+                    Exibir
+                </p>
+                <p class="paragrafo">
+                    < img src="assets/Unoeste.jpg" width="200px" alt="Logotipo da UNOESTE"/ >
+                    <img src="assets/Unoeste.jpg" width="200px" alt="Logotipo da UNOESTE"/>
+                </p>
+                </br>
+                <p class="paragrafo" style="font-weight: bold;">
+                    Atributos
+                </p>
+                <p class="paragrafo">
+                    src: é a URL do arquivo da imagem.
+                </p>
+                <p class="paragrafo">
+                    alt: define um texto alternativo para a imagem, mostrado quando a imagem não puder ser apresentada.
+                </p>
+                <p class="paragrafo">
+                    height (altura) e width (largura): customizar o tamanho da imagem em pixels.
+                </p>
+                </br>
+                <p class="paragrafo" style="font-weight: bold;">
+                    Alinhamento
+                </p>
+                <p class="paragrafo">
+                    .centraliza{width: 500px; margin: 0 auto; display: block;} -- HORIZONTAL
+                </p>
+                <p class="paragrafo">
+                    .vertical‐align: modo‐de‐alinhamento; -- VERTICAL
+                </p>
+                </br>
+                <p class="paragrafo" style="font-weight: bold;">
+                    Background
+                </p>
+                <p class="paragrafo">
+                    background‐image: url("fipp.gif");
+                </p>
+                </br>
+                <p class="paragrafo" style="font-weight: bold;">
+                    Rolagem
+                </p>
+                <p class="paragrafo">
+                    background-attachment. 
+                </p>
+                <p class="paragrafo">
+                    Possíveis valores:
+                </p>
+                <p class="paragrafo">
+                    Scroll: quando a imagem acompanha a rolagem da tela
+                    (padrão)
+                </p>
+                <p class="paragrafo">
+                    Fixed: quando a imagem não acompanha a rolagem da
+                    tela
+                </p>
+                </br>
+                <p class="paragrafo" style="font-weight: bold;">
+                    Posição
+                </p>
+                <p class="paragrafo">
+                    background‐position: coordenada‐horizontal coordenada‐vertical;
+                </p>
+                </br>
+                <p style="font-weight: bold; font-size: 30px; text-indent: 40px" id="listas">
+                    Listas
+                </p>
+                </br>
+                <p class="paragrafo" style="font-weight: bold;">
+                    Listas
+                </p>
+                <p class="paragrafo">
+                    O uso de listas é uma outra forma de mostrar informações. Em HTML temos listas ordenadas (sequenciais ou numeradas) e não-ordenadas.
+                </p>
+                    </br>
+                <p class="paragrafo" style="font-weight: bold;">
+                    Listas ordenadas e não-ordenadas
+                </p>
+                <p class="paragrafo">
+                    O par de tags que define uma lista ordenada é < ol>< /ol> e seus itens são definidos por < li>< /li>.
+                </p>
+                <ol>
+                    <li>Primeiro item</li>
+                    <li>Segundo item</li>
+                    <li>Terceiro item</li>
+                </ol>
+                <p class="paragrafo">
+                    O par de tags que define uma lista não-ordenada é < ul>< /ul> e seus itens são também definidos por < li>< /li>.
+                </p>
+                <ul>
+                    <li>Item 1</li>
+                    <li>Item 2</li>
+                    <li>Item 3</li>
+                </ul>
+                </br>
+                <p class="paragrafo" style="font-weight: bold;">
+                    Lista de definição e listas alinhadas
+                </p>
+                <p class="paragrafo">
+                    O elemento < dl> destina-se a marcar uma lista associativa consistindo de zero ou mais grupos do par nome/valor (lista de definição). Cada grupo consiste de um ou mais nomes (elementos < dt>) seguido por um ou mais valores (elementos < dd>). Dentro de um elemento < dl> não pode haver mais de um < dt> com o mesmo nome.
+                </p>
+                <p class="paragrafo">
+                    É possível criar listas que possuem sub-listas, ou seja, Listas Aninhadas (ou Alinhadas!).
+                </p>
+                </br>
+                <p style="font-weight: bold; font-size: 30px; text-indent: 40px" id="tabelas">
+                    Tabelas
+                </p>
+                </br>
+                <p class="paragrafo" style="font-weight: bold;">
+                    Table
+                </p>
+                <p class="paragrafo">
+                    Uma tabela é identificada pelas tags < table> e < /table>
+                </p>
+                <p class="paragrafo">
+                    Cada linha de uma tabela, é identificada pelas tags
+                    < tr> e < /tr>
+                </p>
+                <p class="paragrafo">
+                    Em cada linha são definidas células com as tags < td> e < /td>
+                </p>
+                </br>
+                <p class="paragrafo" style="font-weight: bold;">
+                    Cabeçalho
+                </p>
+                <p class="paragrafo">
+                    As tags < th> e < /th> definem um cabeçalho para a tabela.
+                </p>
+                <p class="paragrafo">
+                    As tags < caption> e < /caption> definem uma legenda para a tabela.
+                </p>
+                </br>
+                <p class="paragrafo" style="font-weight: bold;">
+                    Colspan e Rowspan
+                </p>
+                <p class="paragrafo">
+                    O atributo colspan é usado na tag < td> para indicar quantas colunas estarão contidas em uma célula.
+                </p>
+                <p class="paragrafo">
+                    O atributo rowspan também é usado na tag < td> para indicar quantas linhas estarão contidas em uma célula.
+                </p>
+                </br>
+                <p class="paragrafo" style="font-weight: bold;">
+                    Borda
+                </p>
+                <p class="paragrafo">
+                    Exemplo: border: 1px solid #4cff00;
+                </p>
+                <table class="centro alinha espaco" border="1">
+                    <caption>TABELA</caption>
+                    <!--Cabeçalho-->
+                    <thead>
+                        <tr>
+                            <th colspan="2">Titulo 1</th>
+                            <th></th>
+                            <th></th>
+                        </tr>                
+                    </thead>
+        
+                    <!--Rodape-->
+                    <tfoot>
+                        
+                    </tfoot>
+        
+                    <!--Corpo-->
+                    <tbody>
+                        <tr>
+                            <th rowspan="2" colspan="2">W3C</th>
+                            <th>...</th>
+                            <th>...</th>
+                        </tr>
+                        <tr>
+                            <th>...</th>
+                            <th>...</th>
+                        </tr>
+                    </tbody>
+        
+                </table>
+                </br>
+                <p style="font-weight: bold; font-size: 30px; text-indent: 40px" id="links">
+                    Links
+                </p>
+                </br>
+                <p class="paragrafo" style="font-weight: bold;">
+                    Link
+                </p>
+                <p class="paragrafo">
+                    A tag < a> … < /a> é utilizada para criar links ou para assinalar uma âncora. Entre estas tags pode colocar-se texto, imagens, cabeçalhos e outras tags.
+                </p>
+                <p class="paragrafo">
+                    Exemplo: < a href="http://www.unoeste.br"><a style="color:blue; text-decoration:underline;" href="http://www.unoeste.br">UNOESTE</a>< /a>
+                </p>
+                </br>
+                <p class="paragrafo" style="font-weight: bold;">
+                    Ãncora
+                </p>
+                <p class="paragrafo">
+                    • O atributo name da tag < a> marca qual é ponto de referência: < a name="nome"> <a name="nome">Texto</a> < /a> 
+                </p>
+                <p class="paragrafo">
+                    Depois basta fazer um link para o ponto de referência: < a href="#nome"> <a style="color:blue; text-decoration:underline;" href="#nome"> Clique Aqui</a>< /a>
+                </p>
+                </br>
+                <p class="paragrafo" style="font-weight: bold;">
+                    Mapeamento
+                </p>
+                <p class="paragrafo">
+                    Permitem a associação de áreas de uma figura com links para diferentes URLs. < map>...< /map> Tag para Mapas name="nome que identifica o mapa"
+                </p>
+                <p class="paragrafo">
+                    < area> Define uma região da imagem
+                </p>
+
+                </br> <p style="font-weight: bold; font-size: 30px; text-indent: 40px" id="tableless">
+                    Tableless
+                </p>
+                </br>
+                <p class="paragrafo" style="font-weight: bold;">
+                    Tamanho e posicionamento
+                </p>
+                <p class="paragrafo">
+                    Em CSS podemos posicionar elementosde bloco por meio do atributo position.
+                </p>
+                <p class="paragrafo">
+                    Possíveis valores: / absolute / relative / fixed / static
+                </p>
+                </br>
+                <p class="paragrafo" style="font-weight: bold;">
+                    Flutuando blocos
+                </p>
+                <p class="paragrafo">
+                    A CSS disponibiliza uma outra propriedade capaz de mudar o posicionamento padrão de elementos a nível de bloco: float
+                </p>
+                <p class="paragrafo">
+                    Possíveis valores: left e right.
+                </p>
+
+                </br>  
+                <p style="font-weight: bold; font-size: 30px; text-indent: 40px" id="flexbox">
+                    Flexbox
+                </p>
+                </br>
+                <p class="paragrafo" style="font-weight: bold;">
+                    Alinhamento dos eixos
+                </p>
+                <p class="paragrafo">
+                    Para entender o funcionamento do Flexbox é necessário entender alguns conceitos que dizem respeito a como os itens são distribuídos no container
+                </p>
+                <p class="paragrafo">
+                    O principal deles é o conceito de eixo principal e eixo transversal, que dependedo valor atribuído à propriedade flex-direction. Se essa propriedade receber ovalor row ou row-reverse (organização em linhas), o eixo principal do container será o horizontal. Já se essa propriedade receber o valor column ou columnreverse (organização em coluna), o eixo principal será o vertical.
+                </p>
+                <p class="paragrafo">
+                    Consequentemente isso definirá qual é o eixo transversal. Se o principal for overtical, o transversal será o horizontal e vice-versa.
+                </p>
+
+                </br>   
+                <p style="font-weight: bold; font-size: 30px; text-indent: 40px" id="formulários">
+                    Formulários
+                </p>
+            
+                </br>
+                <p class="paragrafo" style="font-weight: bold;">
+                    O que é
+                </p>
+                <p class="paragrafo">
+                    Formulários são usados como forma de se obter informações dos usuários de páginas web
+                </p>
+                <p class="paragrafo">
+                    São mecanismos muito comuns e amplamente usados na coleta de informações
+                </p>
+                <p class="paragrafo">
+                    Um formulário é composto por vários elementos de diferentes tipos que permitem a entrada de dados.
+                </p>
+                </br>
+                <p class="paragrafo" style="font-weight: bold;">
+                Definir
+                </p>
+                <p class="paragrafo">
+                    Para definirmos um formulário usamos a tag < form>.
+                </p>
+                </br>
+                <p class="paragrafo" style="font-weight: bold;">
+                    Input
+                </p>
+                <p class="paragrafo">
+                    A tag < input> é a mais utilizada dentro de formulários. O tipo de entrada que a tag representa depende do seu atributo.
+                </p>
+                </br>
+                <p class="paragrafo" style="font-weight: bold;">
+                Rótulo
+                </p>
+                <p class="paragrafo">
+                    O < label>elemento define um rótulo para vários elementos do formulário.
+                </p>
+                </br>
+                <p class="paragrafo" style="font-weight: bold;">
+                    Textarea
+                </p>
+                <p class="paragrafo">
+                    A tag < textarea> insere no formulário uma caixa de texto de múltiplas linhas, denominada área de texto
+                </p>
+                <form class="form" name="FCadAluno" action="pagina.jsp" method="post">
+                    <label for="tnome">Nome:</label>
+                    <input type="text" name="tnome" size="40" maxlength="30" placeholder="Digite seu nome">
+                    <br><br>
+                    <label for="tsenha">Senha:</label>
+                    <input type="password" name="tsenha" size="10" maxlength="8">
+                    <br><br>
+                    <label for="tcursos">Cursos:</label>
+                    <br>
+                    <input type="checkbox" name="tcursos1" value="1">HTML<br/>
+                    <input type="checkbox" name="tcursos2" value="2">CSS<br/>
+                    <input type="checkbox" name="tcursos3" value="3">W3C<br/>
+                    <br><br>
+                    <label for="tinf">Quer receber mais informações?</label><br>
+                    <input type="radio" name="tinf" value="1">Sim<br>
+                    <input type="radio" name="tinf" value="2">Não<br>
+                    <br>
+                    <label for="scid">Cidade:</label>
+                    <select name="scid"> <!--size="4" multiple="multiple"-->
+                            <option value="1">Presidente Prudente</option>
+                            <option value="2">Regente Feijó</option>
+                            <option value="3">Taciba</option>
+                            <option value="4">Pirapozinho</option>
+                    <br>
+                    <label for="tbusca">Escolher Foto:</label>
+                    <input type="file" name="tbusca">
+                    <br><br>
+                    <input type="button" id="bmensagem" value="ok" onclick="alert('Cadastro ok!!!')">
+                    <input type="reset" id="blimpar" value="limpar">
+                    <input type="submit" id="bgravar" value="gravar">
+                    <br><br>
+                    <input type="tel" name="fone" size="40" pattern="\(\d{2}\)\s\d{5}-\d{4}" placeholder="(xx) xxxxx-xxxx">
+                    <br><br>
+                    <input type="email" name="email">
+                    <br><br>
+                    <label for="data"><Datag></Datag>
+                    <input type="date" name="data">
+                    <input type="button" id="mensagem" value="OK" onclick="alert('CADASTRO OK !!!')">
+                    <br>
+                    <label for="tcor">Cor:</label>
+                    <input type="color" name="tcolor">
+                    <br>
+                    <label for="dlist">Escolha:</label>
+                    <input type="text" name="dlist" list="descolha">
+                    <datalist id="descolha">
+                        <option value="HTML"></option>
+                        <option value="HTML4"></option>
+                        <option value="HTML5"></option>
+                        <option value="XHTML"></option>
+                        <option value="W3C"></option>
+                    </datalist>
+                </form>
+            </div>
+        </div>

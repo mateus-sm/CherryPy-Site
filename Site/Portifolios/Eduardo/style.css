@@ -1,0 +1,84 @@
+*{font-family: georgia;}
+
+body{background-color: #4A8C96;}
+
+.cabecalho{
+    text-align: center;
+    color: white;
+}
+
+.cabecalho h1{font-size: 25px;}
+
+.nave{
+    background-image:linear-gradient(to right, #4A8C96, #7FB7C0, #E3EAEB);
+    width:20%;
+    height: 790px;
+    float:left;
+    color: black;
+}
+
+.nave li{margin-bottom: 3px;}
+
+#menu{
+    font-size: 20px;
+    margin-left: 42%;
+    text-decoration: underline;
+}
+
+.fotoBIO{
+    padding-left: 12%;
+    width: 220px;
+}
+
+.nave p{padding-left: 12%;}
+
+#redesocial{
+    color: black;
+    text-decoration: underline;
+}
+
+.conteudo{
+    background-color: #E3EAEB;
+    width:80%;
+    height:790px;
+    float:left;
+    overflow:auto;
+    text-align: justify;
+}
+
+.conteudo p{text-indent: 50px;}
+
+a.edu:link{
+    text-decoration:none;
+    color:black;
+}
+
+a.edu:visited{
+    text-decoration:none;
+    color: black;
+}
+
+a.edu:active{
+    text-decoration:none;
+    color:white;
+}
+
+li:hover{
+    text-decoration:underline;
+    background-image:linear-gradient(to right, #4A8C96, #7FB7C0, #E3EAEB);
+}
+
+a.topo:link{
+    text-decoration:underline;
+    color: #23626B;
+}
+
+a.topo:visited{
+    text-decoration:underline;
+    color: #23626B;
+}
+
+a.topo:active{
+    text-decoration:underline;
+    color:black;
+}

@@ -1,0 +1,50 @@
+body {
+    font-family: Arial;
+    line-height: 1.6;
+}
+
+header{
+    background-color: #3a3a3a;
+    color: #ffffff;
+}
+
+section {
+    padding: 32px;
+    margin: 32px 0;
+    background-color: #f4f4f4;
+}
+
+footer {
+    font-size: 35px;
+    background-color: #3a3a3a;
+    color: #ffffff;
+    text-align: center;
+    padding: 5px;
+}
+
+div{
+    height: 10px;
+    
+}
+
+.logo{
+    max-width: 150px;
+    max-height: 100px;
+    width: auto;
+    height: auto;
+    float: right;
+    margin-top: -120px;
+}
+
+.imagem{
+    width:130px;
+    height:150px;
+    text-align: left;
+    margin-top: 50px;
+    margin-left: 50px;
+}
+
+.texto{
+    text-align: center;
+    font-size: 80px;
+}
