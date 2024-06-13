@@ -1,12 +1,13 @@
 import cherrypy
 import os
 
-local_dir = os.path.dirname(__file__)
+#Chega em \CherryPy-Site
+abs_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 class PaginaEventos():
-    topo = open(local_dir + "\\Site\\cabecalho.html", encoding='utf-8').read()
-    conteudo = open(local_dir + "\\Site\\Page03.html", encoding='utf-8').read()
-    rodape = open(local_dir + "\\Site\\rodape.html", encoding='utf-8').read()
+    topo = open(abs_dir + "\\Site\\cabecalho.html", encoding='utf-8').read()
+    conteudo = open(abs_dir + "\\Site\\Page03.html", encoding='utf-8').read()
+    rodape = open(abs_dir + "\\Site\\rodape.html", encoding='utf-8').read()
 
     @cherrypy.expose()
     def index(self):
