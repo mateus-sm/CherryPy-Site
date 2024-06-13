@@ -30,6 +30,10 @@ class Formulario():
         if len(pIdade) >= 0:
             self.__idade = pIdade
 
+    def set_telefone(self, pTelefone):
+        if len(pTelefone) >= 0:
+            self.__telefone = pTelefone
+
     # Getters
     def get_id(self):
         return self.__id
@@ -39,6 +43,9 @@ class Formulario():
     
     def get_idade(self):
         return self.__idade
+    
+    def get_telefone(self):
+        return self.__telefone
 
     # Devolver todas as espécies cadastradas no banco de dados
     def obterRegistros(self):
@@ -59,9 +66,9 @@ class Formulario():
 
     def gravar(self): # Pegar os dados do objeto e gravar no banco de dados
         sql =   """
-                insert into DB_Formulario (FORM_Nome, FORM_Idade)
-                VALUES ("{}", "{}")
-                """.format(self.__nome, self.__idade)
+                insert into DB_Formulario (FORM_Nome, FORM_Idade, FORM_Telefone)
+                VALUES ("{}", "{}", "{}")
+                """.format(self.__nome, self.__idade, self.__telefone)
         return self.__banco.executarInsertUpdateDelete(sql)
 
     def excluir(self): # Exluir o id que está no objeto do banco de dados
@@ -71,9 +78,9 @@ class Formulario():
     def alterar(self):
         sql =   """
                 update DB_Formulario
-                set FORM_Nome = "{}", FORM_Idade = "{}"
+                set FORM_Nome = "{}", FORM_Idade = "{}", FORM_Telefone = "{}"
                 where FORM_ID = {}
-                """.format(self.__nome, self.__idade, self.__id)
+                """.format(self.__nome, self.__idade, self.__telefone, self.__id)
         return self.__banco.executarInsertUpdateDelete(sql)
 
 

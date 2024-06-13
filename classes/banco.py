@@ -12,7 +12,7 @@ class Banco():
         self.__cursor = None
 
     def __abrirConexao(self):
-        self.__conexao = sqlite3.connect("DB\Formulario.db")
+        self.__conexao = sqlite3.connect(abs_dir + "\\DB\\Formulario.db")
         self.__conexao.row_factory = sqlite3.Row #isso serve para que você possa acessar os dados pelos nomes dos atributos da tabela e não somente pela posição que eles se encontram
         self.__cursor = self.__conexao.cursor()
 

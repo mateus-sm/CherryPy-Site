@@ -15,7 +15,7 @@ class PaginaInscricao():
     def index(self):
         return self.montaFormulario()
     
-    def montaFormulario(self, pId = 0, pNome = '', pIdade = ''):
+    def montaFormulario(self, pId = 0, pNome = "", pIdade = "", pTelefone = ""):
         html = self.topo
         # Formulario
         html += """
@@ -58,7 +58,8 @@ class PaginaInscricao():
 
                                     <div style="margin: auto;">
                                         <div>
-                                            Telefone: <input type="tel" id="telefone">
+                                            <label for="txtTelefone">Telefone: </label>
+                                            <input type="text" id="txtTelefone" name="txtTelefone" value="%s" size="30" maxlength="30">
                                         </div>
                                     </div>
                                     </br>
@@ -75,7 +76,8 @@ class PaginaInscricao():
 
                                     <div style="margin: auto;">
                                         <div>
-                                            Cidade: <input type="text" id="cidade">
+                                            <label for="">Cidade: </label>
+                                            <input type="text" id="" name="" value="" size="30" maxlength="30">
                                         </div>
                                     </div>
                                     </br>
@@ -119,7 +121,7 @@ class PaginaInscricao():
                                 </div>
                             </form>
                         </div>
-                """ % (pId, pNome, pIdade)
+                """ % (pId, pNome, pIdade, pTelefone)
         html += self.montaTabela()
         html += self.rodape
         return html
@@ -137,6 +139,7 @@ class PaginaInscricao():
                         <th> Cidade  </th>
                         <th> Endereço </th>
                         <th> Instituição de Ensino </th>
+                        <th> Opções </th>
                     </tr>
                 """
         objForm = Formulario() # Criar um objeto do tipo Formulario (Instanciar um objeto)
@@ -147,7 +150,7 @@ class PaginaInscricao():
                         <td> %s </td>
                         <td> %s </td>
                         <td> %s </td>
-                        <td>  </td>
+                        <td> %s </td>
                         <td>  </td>
                         <td>  </td>
                         <td>  </td>
@@ -156,7 +159,7 @@ class PaginaInscricao():
                             <a href="alterarFormulario?idFor=%s">[Alterar]</a>
                         </td>
                     </tr>
-                    """ % (reg['FORM_ID'], reg['FORM_Nome'], reg['FORM_Idade'], reg['FORM_ID'], reg['FORM_ID'])
+                    """ % (reg["FORM_ID"], reg["FORM_Nome"], reg["FORM_Idade"], reg["FORM_Telefone"], reg["FORM_ID"], reg["FORM_ID"])
 
         html += """
                         </table><br><br><br>
@@ -167,11 +170,12 @@ class PaginaInscricao():
         return html
 
     @cherrypy.expose()
-    def gravarFormulario(self, txtId, txtNome, txtIdade, btnGravar):
+    def gravarFormulario(self, txtId, txtNome, txtIdade, txtTelefone, btnGravar):
         if len(txtNome) > 0: # A descrição não está vazia
             objForm = Formulario()
             objForm.set_nome(txtNome)
             objForm.set_idade(txtIdade)
+            objForm.set_telefone(txtTelefone)
             
             retorno = 0 # Variável para controlar se o comando foi executado com sucesso!!
             if int(txtId) == 0: # É um novo registro no banco
@@ -213,4 +217,4 @@ class PaginaInscricao():
         # Buscar no banco de dados a espécie com o id que foi selecinada na tabela
         dadosFormularioSelect = objForm.obterRegistroE(idFor)
         # Colocar os dados que retornaram do SQL nos inputs do formuário
-        return self.montaFormulario(dadosFormularioSelect[0]['FORM_ID'], dadosFormularioSelect[0]['FORM_Nome'], dadosFormularioSelect[0]['FORM_Idade'])
+        return self.montaFormulario(dadosFormularioSelect[0]["FORM_ID"], dadosFormularioSelect[0]["FORM_Nome"], dadosFormularioSelect[0]["FORM_Idade"], dadosFormularioSelect[0]["FORM_Telefone"])
