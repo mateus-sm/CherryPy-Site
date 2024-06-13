@@ -36,7 +36,7 @@ class Formulario():
     def obterRegistros(self):
         sql ='''
             select * from DB_Formulario
-            order by ID
+            order by FORM_Nome
         '''
         return self.__banco.executarSelect(sql)
 
@@ -45,32 +45,32 @@ class Formulario():
             self.__id = id # a gente vai colocar no objeto o id da linha que foi selecionada na tabela
         sql ='''
             select * from DB_Formulario
-            where ID = #id 
+            where FORM_ID = #id
         '''
         sql = sql.replace('#id', str(self.__id))
         return self.__banco.executarSelect(sql)
 
     def gravar(self): # vai pegar os dados do objeto e gravar no banco de dados
         sql ='''
-            insert into DB_Formulario (Nome)
+            insert into DB_Formulario (FORM_Nome)
             VALUES ("#nome")
         '''
         sql = sql.replace('#nome', self.__nome)
         return self.__banco.executarInsertUpdateDelete(sql)
 
     def excluir(self): # vai exluir o id que está no objeto do banco de dados
-        sql = 'delete from DB_Formulario where ID = #id'
+        sql = 'delete from DB_Formulario where FORM_ID = #id'
         sql = sql.replace('#id',str(self.__id))
         return self.__banco.executarInsertUpdateDelete(sql)
 
     def alterar(self):
         sql ='''
             update DB_Formulario
-            set Nome = "#Nome"
-            where ID = #id
+            set FORM_Nome = "#nome"
+            where FORM_ID = #id
         '''
         sql = sql.replace('#id',str(self.__id))
-        sql = sql.replace('#Nome',self.__nome)
+        sql = sql.replace('#nome',self.__nome)
         return self.__banco.executarInsertUpdateDelete(sql)
 
 

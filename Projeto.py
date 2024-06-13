@@ -29,7 +29,7 @@ class Principal():
     
 server_config={
 'server.socket_host': '127.0.0.1',
-'server.socket_port': 80
+'server.socket_port': 81
 }
 
 cherrypy.config.update(server_config)
