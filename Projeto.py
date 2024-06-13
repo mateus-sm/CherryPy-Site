@@ -1,16 +1,16 @@
 import cherrypy
 import os
 
-from pageDetalhesDoEvento import PaginaDetalhes
-from pageRealizarInscricoes import PaginaInscricao
-from pageEventosJaRealizados import PaginaEventos
-from pageVistoEmAula import PaginaVisto
+from Paginas.pageDetalhesDoEvento import PaginaDetalhes
+from Paginas.pageRealizarInscricoes import PaginaInscricao
+from Paginas.pageEventosJaRealizados import PaginaEventos
+from Paginas.pageVistoEmAula import PaginaVisto
 
-from pageMateus import PaginaMateus
-from pageVinicius import PaginaVinicius
-from pageEduardo import PaginaEduardo
-from pageIgor import PaginaIgor
-from pageKaiky import PaginaKaiky
+from Portifolios.pageMateus import PaginaMateus
+from Portifolios.pageVinicius import PaginaVinicius
+from Portifolios.pageEduardo import PaginaEduardo
+from Portifolios.pageIgor import PaginaIgor
+from Portifolios.pageKaiky import PaginaKaiky
 
 local_dir = os.path.dirname(__file__)
 

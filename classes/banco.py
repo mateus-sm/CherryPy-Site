@@ -1,7 +1,8 @@
 import sqlite3
 import os
 
-local_dir = os.path.dirname(__file__)
+#Chega em \CherryPy-Site
+abs_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 #Executar todas as rotinas necessárias para abrir, fechar conexão emitir instruções SQL (genéricas) para o BD
 class Banco():
@@ -11,7 +12,7 @@ class Banco():
         self.__cursor = None
 
     def __abrirConexao(self):
-        self.__conexao = sqlite3.connect("C:\\Users\\Matte\\OneDrive\\Documentos\\VScode\\Python\\Ambientes-de-Programacao\\2T\\Trabalho\\DB\\Formulario.db")
+        self.__conexao = sqlite3.connect("DB\Formulario.db")
         self.__conexao.row_factory = sqlite3.Row #isso serve para que você possa acessar os dados pelos nomes dos atributos da tabela e não somente pela posição que eles se encontram
         self.__cursor = self.__conexao.cursor()
 
