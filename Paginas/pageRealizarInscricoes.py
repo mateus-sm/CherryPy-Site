@@ -1,7 +1,7 @@
 import cherrypy
 import os
 
-#Chega em \CherryPy-Site
+#Chega em \CherryPy-Site #https://stackoverflow.com/questions/3430372/how-do-i-get-the-full-path-of-the-current-files-directory?noredirect=1&lq=1
 abs_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 from classes.formulario import Formulario
