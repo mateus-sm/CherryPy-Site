@@ -20,7 +20,7 @@ class PaginaInscricao():
         html += """
                 <div class="Menu-Conteudo FlexSpaceBetween">
 
-                    <div class="Menu FlexColumnSpaceBetween">
+                    <div class="Menu FlexColumnSpaceBetween" style="overflow: auto;">
                         <div class="Voltar" style="background-color: #ffffff;">
                             <h2 class="AnularMargem"><a href="/">Voltar</a></h2>
                         </div>
@@ -30,77 +30,93 @@ class PaginaInscricao():
 
                         <div class="evento">
                             <form name="inscircao" action="gravarFormulario" method="post">
-                                <div class="pessoal">
+                                <div class="FlexColumnSpaceBetween">
 
-                                    <div class="p0">
+                                    <div style="margin: auto;">
                                         <h3>Dados pessoais:</h3>
-                                        </br></br>
                                     </div>
+                                    </br>
+
                                     <input type="hidden" id="txtId" name="txtId" value="%s"/>
-                                    <div class="p1">
-                                        <div class="pnome">
+                                    <div class="FlexSpaceBetween">
+
+                                        <div style="margin-right: 50px;">
                                             <label for="txtNome">Nome: </label>
                                             <input type="text" id="txtNome" name="txtNome" value="%s" size="30" maxlength="30">
                                         </div>
-                                        </br>
-                                        <div class="pidade">
+                                        
+                                        <div>
                                             <label for="txtIdade">Idade: </label>
                                             <input type="text" id="txtIdade" name="txtIdade" value="%s" size="30" maxlength="30">
                                         </div>
+
                                     </div>
                                     </br>
-                                    <div class="p2">
-                                        <div class="ptel">
+
+                                    <div style="margin: auto;">
+                                        <div>
                                             Telefone: <input type="tel" id="telefone">
                                         </div>
                                     </div>
                                     </br>
                                     
                                 </div>
+                                </br>
 
-                                <div class="endereco">
+                                <div class="FlexColumnSpaceBetween">
 
-                                    <div class="e0">
+                                    <div style="margin: auto;">
                                         <h3>Seção de endereço:</h3>
                                     </div>
+                                    </br>
 
-                                    <div class="e1">
-                                        <div class="ecid">
+                                    <div style="margin: auto;">
+                                        <div>
                                             Cidade: <input type="text" id="cidade">
                                         </div>
                                     </div>
+                                    </br>
 
-                                    <div class="e2">
-                                        <div class="ecep">
+                                    <div style="margin: auto;">
+                                        <div>
                                             Endereço <input type="text" id="rua">
                                         </div>
                                     </div>
-                                    
-                                </div>
+                                    </br>
 
-                                <div class="part">
-                                    <div class="part0">
+                                </div>
+                                </br>
+
+                                <div class="FlexColumnSpaceBetween">
+
+                                    <div style="margin: auto;">
                                         <h3>Participação do evento:</h3>
                                     </div>
-                                    <div class="part1">
+                                    </br>
+
+                                    <div style="margin: auto;">
                                         Instituição de ensino: <input type="text" id="ensino">
                                     </div>
                                     </br>
+
                                 </div>
+                                </br>
 
                                 <div class="buttons">
+
                                     <div>
                                         <input type="submit" id="btnGravar" name="btnGravar" value="Gravar">
                                     </div>
                                     </br>
-                                    <div class="b1">
-                                        <input type="reset" value="Limpar" id="b1">
-                                    </div>
-                                </div>
 
+                                    <div>
+                                        <input type="reset" value="Limpar" id="btnLimpar">
+                                    </div>
+
+                                </div>
                             </form>
                         </div>
-            """ % (pId, pNome, pIdade)
+                """ % (pId, pNome, pIdade)
         html += self.montaTabela()
         html += self.rodape
         return html

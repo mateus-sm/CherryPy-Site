@@ -1,3 +1,4 @@
+/*CSS GERAL*/
 *{
     margin: 0em;
     padding: 0em;
@@ -139,6 +140,7 @@ body {
 .form {
     text-align: center;
 }
+/*FIM CSS GERAL*/
 
 /*CSS TABELA*/
 .centro {
@@ -161,125 +163,70 @@ tr, th {
 }
 /*FIM CSS TABELA*/
 
-
 /*CSS DO FORMULARIO*/
-.evento{
+.evento {
     background-color: #008cff93;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: auto;
     border-radius: 10px;
-    width: 57.79%;
-    padding: 5px; /* Adicione espaçamento interno */
+    width: 700px;
+    padding: 5px;
 }
-hr{
+
+hr {
     background-color: black;
 }
-.p0, .p1, .p2, .p3{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin: auto;
+
+#cidade {
+    width: 340px;
+    margin-left: 29px;
 }
-.p1{
-    margin-top: 15px;
-    margin-left: 15px;
-}
-.p2{
-    margin-left: 15px;
-}
-.p3{
-    margin-left: 32px;
-}
-.p4{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin: auto;
-    margin-right: 75px;
-}
-.pnome{
-    margin-right: 50px;
-}
-.ptel{
-    margin-right: 50px;
-}
-.e0, .e1, .e2{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin: auto;
-}
-.e0{
-    margin-top: 25px;
-    margin-left: 15px;
-}
-.e1{
-    margin-top: 25px;
-    margin-left: 75px;
-}
-.e2{
-    margin-top: 25px;
-    margin-left: 30px;
-}
-#rua{
+
+#rua {
     width: 340px;
 }
-.ecid{
-    margin-right: 50px;
+
+#ensino {
+    width: 340px;
 }
-.ecep{
-    margin-right: 50px;
-}
-.part0, .part1, .part2{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin: auto;  
-}
-.part0{
-    margin-top: 25px;
-    margin-left: 15px;
-}
-.part1{
-    margin-top: 25px;
-    margin-right: 110px;
-}
-.part2{
-    margin-right: 150px;
-}
-.buttons{
+
+.buttons {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    margin-top: 50px;   
-    margin-bottom: 50px;
+    margin-top: 20px;
+    margin-bottom: 30px;
 }
-#btnGravar, #b1{
+
+#btnGravar, #btnLimpar {
     width: 250px;
     border: solid #E9EDF1;
     border-radius: 2px;
     padding: 1px;
     cursor: pointer;
 }
-input[type="text"]{
+
+input[type="text"] {
     margin-left: 15px;
     border: solid #E9EDF1;
-    border-radius: 10px;
+    border-radius: 5px;
 }
-input[type="radio"]{
+
+input[type="radio"] {
     margin-left: 15px;
-    border: solid #E9EDF1;
-    border-radius: 10px;
-}
-input[type="file"]{
-    margin-left: 15px;
-}   
-input[type="tel"]{
     border: solid #E9EDF1;
     border-radius: 10px;
 }
 
+input[type="file"] {
+    margin-left: 15px;
+}
+
+input[type="tel"] {
+    border: solid #E9EDF1;
+    border-radius: 5px;
+}
 /*FIM DO CSS DO FORMULARIO*/

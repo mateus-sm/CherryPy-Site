@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mutirão do Lixo Eletrônico</title>
+        <link rel="stylesheet" href="/Site/CSS/style.css">
+    </head>
+
+    <body>
+        <div class="site">       
+
+            <div class="Menu-Conteudo FlexSpaceBetween">
+
+                <div class="Menu FlexColumnSpaceBetween" style="overflow: auto;">
+                    <div class="Voltar" style="background-color: #ffffff;">
+                        <h2 class="AnularMargem"><a href="/">Voltar</a></h2>
+                    </div>
+                </div>
+
+                <div class="Conteudo">
+
+                    <div class="evento">
+                        <form name="inscircao" action="gravarFormulario" method="post">
+                            <div class="FlexColumnSpaceBetween">
+
+                                <div style="margin: auto;">
+                                    <h3>Dados pessoais:</h3>
+                                </div>
+                                </br>
+
+                                <input type="hidden" id="txtId" name="txtId" value="%s"/>
+                                <div class="FlexSpaceBetween">
+
+                                    <div style="margin-right: 50px;">
+                                        <label for="txtNome">Nome: </label>
+                                        <input type="text" id="txtNome" name="txtNome" value="%s" size="30" maxlength="30">
+                                    </div>
+                                    
+                                    <div>
+                                        <label for="txtIdade">Idade: </label>
+                                        <input type="text" id="txtIdade" name="txtIdade" value="%s" size="30" maxlength="30">
+                                    </div>
+
+                                </div>
+                                </br>
+
+                                <div style="margin: auto;">
+                                    <div>
+                                        Telefone: <input type="tel" id="telefone">
+                                    </div>
+                                </div>
+                                </br>
+                                
+                            </div>
+                            </br>
+
+                            <div class="FlexColumnSpaceBetween">
+
+                                <div style="margin: auto;">
+                                    <h3>Seção de endereço:</h3>
+                                </div>
+                                </br>
+
+                                <div style="margin: auto;">
+                                    <div>
+                                        Cidade: <input type="text" id="cidade">
+                                    </div>
+                                </div>
+                                </br>
+
+                                <div style="margin: auto;">
+                                    <div>
+                                        Endereço <input type="text" id="rua">
+                                    </div>
+                                </div>
+                                </br>
+
+                            </div>
+                            </br>
+
+                            <div class="FlexColumnSpaceBetween">
+
+                                <div style="margin: auto;">
+                                    <h3>Participação do evento:</h3>
+                                </div>
+                                </br>
+
+                                <div style="margin: auto;">
+                                    Instituição de ensino: <input type="text" id="ensino">
+                                </div>
+                                </br>
+
+                            </div>
+                            </br>
+
+                            <div class="buttons">
+
+                                <div>
+                                    <input type="submit" id="btnGravar" name="btnGravar" value="Gravar">
+                                </div>
+                                </br>
+
+                                <div>
+                                    <input type="reset" value="Limpar" id="btnLimpar">
+                                </div>
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html> 
