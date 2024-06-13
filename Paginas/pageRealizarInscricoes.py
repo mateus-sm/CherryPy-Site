@@ -29,6 +29,8 @@ class PaginaInscricao():
 
                     <div class="Conteudo">
 
+                        <h1 style="display: flex; justify-content: center; align-items: center;">Formulario</h1>
+
                         <div class="evento">
                             <form name="inscircao" action="gravarFormulario" method="post">
                                 <div class="FlexColumnSpaceBetween">
@@ -125,8 +127,9 @@ class PaginaInscricao():
     def montaTabela(self):
         html =  """
                 <br>
-                <table class="alinha">
-                    <tr>
+                <h1 style="display: flex; justify-content: center; align-items: center;">SQL</h1>
+                <table class="evento" style="width: fit-content;margin: auto;">
+                    <tbody style="width: 100%; margin: auto;"><tr>
                         <th> Código </th>
                         <th> Nome </th>
                         <th> Idade </th>

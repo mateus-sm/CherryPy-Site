@@ -148,14 +148,10 @@ body {
     font-size: xx-large;
 }
 
-.alinha {
-    width: 500px;
-    margin: 0 auto;
-}
-
 tr, th {
-    background-color: #e0e0e0;
+    background-color: #ffffff;
     border:3px solid gray;
+    padding: 0px 30px
 }
 
 .espaco {
