@@ -12,6 +12,10 @@ class Formulario():
         self.__id = 0
         self.__nome = ""
         self.__idade = ""
+        self.__telefone = ""
+        self.__cidade = ""
+        self.__endereco = ""
+        self.__instituicao = ""
         self.__banco = Banco() # Essa propriedade é responsável por manter a conexão com o banco de dados especificamente com a tabela Formulario
 
     # Métodos da classe
@@ -34,6 +38,18 @@ class Formulario():
         if len(pTelefone) >= 0:
             self.__telefone = pTelefone
 
+    def set_cidade(self, pCidade):
+        if len(pCidade) >= 0:
+            self.__cidade = pCidade
+
+    def set_endereco(self, pEndereco):
+        if len(pEndereco) >= 0:
+            self.__endereco = pEndereco
+
+    def set_instituicao(self, pInstituicao):
+        if len(pInstituicao) >= 0:
+            self.__instituicao = pInstituicao
+
     # Getters
     def get_id(self):
         return self.__id
@@ -46,6 +62,15 @@ class Formulario():
     
     def get_telefone(self):
         return self.__telefone
+    
+    def get_cidade(self):
+        return self.__cidade
+    
+    def get_endereco(self):
+        return self.__endereco
+    
+    def get_instituicao(self):
+        return self.__instituicao
 
     # Devolver todas as espécies cadastradas no banco de dados
     def obterRegistros(self):
@@ -66,9 +91,9 @@ class Formulario():
 
     def gravar(self): # Pegar os dados do objeto e gravar no banco de dados
         sql =   """
-                insert into DB_Formulario (FORM_Nome, FORM_Idade, FORM_Telefone)
-                VALUES ("{}", "{}", "{}")
-                """.format(self.__nome, self.__idade, self.__telefone)
+                insert into DB_Formulario (FORM_Nome, FORM_Idade, FORM_Telefone, FORM_Cidade, FORM_Endereco, FORM_Instituicao)
+                VALUES ("{}", "{}", "{}", "{}", "{}")
+                """.format(self.__nome, self.__idade, self.__telefone, self.__cidade, self.__endereco, self.__instituicao)
         return self.__banco.executarInsertUpdateDelete(sql)
 
     def excluir(self): # Exluir o id que está no objeto do banco de dados
@@ -78,9 +103,9 @@ class Formulario():
     def alterar(self):
         sql =   """
                 update DB_Formulario
-                set FORM_Nome = "{}", FORM_Idade = "{}", FORM_Telefone = "{}"
+                set FORM_Nome = "{}", FORM_Idade = "{}", FORM_Telefone = "{}", FORM_Cidade = "{}", FORM_Endereco = "{}", FORM_Instituicao = "{}"
                 where FORM_ID = {}
-                """.format(self.__nome, self.__idade, self.__telefone, self.__id)
+                """.format(self.__nome, self.__idade, self.__telefone, self.__cidade, self.__endereco, self.__instituicao, self.__id)
         return self.__banco.executarInsertUpdateDelete(sql)
 
 
