@@ -261,7 +261,7 @@ hr{
     margin-top: 50px;   
     margin-bottom: 50px;
 }
-#b0, #b1{
+#btnGravar, #b1{
     width: 250px;
     border: solid #E9EDF1;
     border-radius: 2px;
