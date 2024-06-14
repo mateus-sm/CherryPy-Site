@@ -10,6 +10,7 @@ class PaginaInscricao():
     topo = open(abs_dir + "\\Site\\cabecalho.html", encoding='utf-8').read()
     conteudo = open(abs_dir + "\\Site\\Page02.html", encoding='utf-8').read()
     rodape = open(abs_dir + "\\Site\\rodape.html", encoding='utf-8').read()
+    cadastro = open(abs_dir + "\\Site\\confirmacao.html", encoding='utf-8').read()
 
     @cherrypy.expose()
     def index(self):
@@ -45,13 +46,13 @@ class PaginaInscricao():
         for reg in dados: # Percorre a lista e gerar o HTML de cada linha da tabela com os dados
             html += f"""
                     <tr>
-                        <td> {reg["FORM_ID"]} </td>
+                        <td style="text-align: center;"> {reg["FORM_ID"]} </td>
                         <td> {reg["FORM_Nome"]} </td>
-                        <td> {reg["FORM_Idade"]} </td>
+                        <td style="text-align: center;"> {reg["FORM_Idade"]} </td>
                         <td> {reg["FORM_Telefone"]} </td>
                         <td> {reg["FORM_Cidade"]} </td>
                         <td> {reg["FORM_Endereco"]} </td>
-                        <td> {reg["FORM_Instituicao"]} </td>
+                        <td style="text-align: center;"> {reg["FORM_Instituicao"]} </td>
                         <td style="text-align:center">
                             <a href="excluirFormulario?idFor={reg["FORM_ID"]}">[Excluir]</a>
                             <a href="alterarFormulario?idFor={reg["FORM_ID"]}">[Alterar]</a>
@@ -69,7 +70,7 @@ class PaginaInscricao():
 
     @cherrypy.expose()
     def gravarFormulario(self, txtId, txtNome, txtIdade, txtTelefone, txtCidade, txtEndereco, txtInstituicao, btnGravar):
-        if len(txtNome) >= 0 and (txtIdade.isdigit() or len(txtIdade) >= 0) and (txtTelefone.isdigit() or len(txtTelefone) >= 0):
+        if len(txtNome) > 0:
             # A descrição não está vazia e os int são validos
             objForm = Formulario()
             objForm.set_nome(txtNome)
@@ -80,38 +81,18 @@ class PaginaInscricao():
             objForm.set_instituicao(txtInstituicao)
             
             retorno = 0 # Variável para controlar se o comando foi executado com sucesso
+            
             if int(txtId) == 0: # É um novo registro no banco
                 retorno = objForm.gravar()
             else: # Registro já existe na tabela, fazer apenas a alteração
                 objForm.set_id(int(txtId))
                 retorno = objForm.alterar()
             if retorno > 0: # Gravação no banco OK
-                return  f"""
-                        <h2>O Cadastro <b>{txtNome}</b> foi gravado com sucesso!!</h2>
-                        <a href="/rotaInscricao">voltar</a>
-                        """
+                return self.cadastro
             else:
-                return  f"""
-                        <h2>Erro ao gravar o Form <b>{txtNome}</b></h2>
-                        <a href="/rotaInscricao">voltar</a>
-                        """
-        else: # Descrição está vazia ou Idade/Telefone invalidos
-            if (len(txtNome) < 0):
-                return  """
-                        <h2>O Nome precisa ser informado!!</h2>
-                        <a href="/rotaInscricao">voltar</a>
-                        """
-            elif not txtIdade.isdigit():
-                return  """
-                        <h2>Idade Invalida!!</h2>
-                        <a href="/rotaInscricao">voltar</a>
-                        """
-            else:
-                return  """
-                        <h2>Telefone Invalido!!</h2>
-                        <a href="/rotaInscricao">voltar</a>
-                        """
-
+                return self.cadastro.replace("<h2>Cadastro concluído com sucesso!</h2>", "<h2>Erro ao gravar o Registro</h2>")
+        else: # Nome está vazio
+            return self.cadastro.replace("<h2>Cadastro concluído com sucesso!</h2>", "<h2>O Nome precisa ser informado!!</h2>")
         
     @cherrypy.expose()
     def excluirFormulario(self, idFor):
@@ -120,10 +101,7 @@ class PaginaInscricao():
         if objForm.excluir() > 0:
             raise cherrypy.HTTPRedirect('/rotaInscricao')
         else:
-            return  """
-                    <h2> Não foi possível excluir a espécie! </h2>
-                    <a href="/rotaInscricao"> voltar </a>
-                    """
+            return self.cadastro.replace("<h2>Cadastro concluído com sucesso!</h2>", "<h2> Não foi possível excluir o Registro! </h2>")
 
     @cherrypy.expose()
     def alterarFormulario(self, idFor):
