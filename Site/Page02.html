@@ -1,76 +1,106 @@
+<div class="Menu-Conteudo FlexSpaceBetween">
 
-            <div class="Menu-Conteudo FlexSpaceBetween">
+    <div class="Menu FlexColumnSpaceBetween" style="overflow: auto;">
+        <div class="Voltar" style="background-color: #ffffff;">
+            <h2 class="AnularMargem"><a href="/">Voltar</a></h2>
+        </div>
+    </div>
 
-                <div class="Menu FlexColumnSpaceBetween">                  
-                    <div class="Voltar" style="background-color: #ffffff;">
-                        <h2 class="AnularMargem"><a href="/">Voltar</a></h2>
+    <div class="Conteudo">
+
+        <h1 style="display: flex; justify-content: center; align-items: center;">Formulario</h1>
+
+        <div class="evento">
+            <form name="inscircao" action="gravarFormulario" method="post">
+                <div class="FlexColumnSpaceBetween">
+
+                    <div style="margin: auto;">
+                        <h3>Dados pessoais:</h3>
                     </div>
-                </div>
+                    </br>
 
-                <div class="Conteudo">
+                    <input type="hidden" id="txtId" name="txtId" value="{ID}"/>
+                    <div class="FlexSpaceBetween">
 
-                    <div class="evento">
-                        <form name="inscircao" action="pagina.jsp">
-                            <div class="pessoal">
-                                <div class="p0">
-                                    <h3>Dados pessoais:</h3>
-                                    </br></br>
-                                </div>
-                                <div class="p1">
-                                    <div class="pnome">
-                                        Nome: <input type="text" id="nome">
-                                    </div>
-                                    </br>
-                                    <div class="pidade">
-                                        Idade: <input type="text" id="idade">
-                                    </div>
-                                </div>
-                                </br>
-                                <div class="p2">
-                                    <div class="ptel">
-                                        Telefone: <input type="tel" id="telefone">
-                                    </div>
-                                </div>
-                                </br>
-                            </div>
-                            <div class="endereco">
-                                <div class="e0">
-                                    <h3>Seção de endereço:</h3>
-                                </div>
-                                <div class="e1">
-                                    <div class="ecid">
-                                        Cidade: <input type="text" id="cidade">
-                                    </div>
-                                </div>
-                                <div class="e2">
-                                    <div class="eend">
-                                        Endereço <input type="text" id="rua">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="part">
-                                <div class="part0">
-                                    <h3>Participação do evento:</h3>
-                                </div>
-                                <div class="part1">
-                                    Instituição de ensino: <input type="text" id="ensino">
-                                </div>
-                                </br>
-                            </div>
+                        <div style="margin-right: 50px;">
+                            <label for="txtNome">Nome: </label>
+                            <input type="text" id="txtNome" name="txtNome" value="{Nome}" size="30" maxlength="30">
+                        </div>
+                        
+                        <div>
+                            <label for="txtIdade">Idade: </label>
+                            <input type="text" id="txtIdade" name="txtIdade" value="{Idade}" size="30" maxlength="30">
+                        </div>
 
-                            <div class="buttons">
-                                <div class="b0">
-                                    <input type="submit" value="Enviar" id="b0">
-                                </div>
-                                </br>
-                                <div class="b1">
-                                    <input type="reset" value="Limpar" id="b1">
-                                </div>
-                            </div>
-                            
-                        </form>
                     </div>
-                     
-                </div>
+                    </br>
 
-            </div>
+                    <div style="margin: auto;">
+                        <div>
+                            <label for="txtTelefone">Telefone: </label>
+                            <input type="text" id="txtTelefone" name="txtTelefone" value="{Telefone}" size="30" maxlength="30">
+                        </div>
+                    </div>
+                    </br>
+                    
+                </div>
+                </br>
+
+                <div class="FlexColumnSpaceBetween">
+
+                    <div style="margin: auto;">
+                        <h3>Seção de endereço:</h3>
+                    </div>
+                    </br>
+
+                    <div style="margin: auto;">
+                        <div>
+                            <label for="txtCidade">Cidade: </label>
+                            <input type="text" id="txtCidade" name="txtCidade" value="{Cidade}" size="30" maxlength="30">
+                        </div>
+                    </div>
+                    </br>
+
+                    <div style="margin: auto;">
+                        <div>
+                            <label for="txtEndereco">Endereço: </label>
+                            <input type="text" id="txtEndereco" name="txtEndereco" value="{Endereco}" size="30" maxlength="30">
+                        </div>
+                    </div>
+                    </br>
+
+                </div>
+                </br>
+
+                <div class="FlexColumnSpaceBetween">
+
+                    <div style="margin: auto;">
+                        <h3>Participação do evento:</h3>
+                    </div>
+                    </br>
+
+                    <div style="margin: auto;">
+                        <label for="txtInstituicao">Instituição de ensino: </label>
+                        <input type="text" id="txtInstituicao" name="txtInstituicao" value="{Instituicao}" size="30" maxlength="30">
+                    </div>
+                    </br>
+
+                </div>
+                </br>
+
+                <div class="buttons">
+
+                    <div>
+                        <input type="submit" id="btnGravar" name="btnGravar" value="Gravar">
+                    </div>
+                    </br>
+
+                    <div>
+                        <a href="limparFormulario">
+                            <input id="btnLimpar" type="button" value="Limpar">
+                        </a>
+                    </div>
+
+                </div>
+            </form>
+        </div>

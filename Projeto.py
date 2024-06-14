@@ -57,4 +57,4 @@ root.rotaIgor = PaginaIgor()
 root.rotaIgor = PaginaIgor()
 root.rotaKaiky = PaginaKaiky()
 
-cherrypy.quickstart(root,config=local_config)
+cherrypy.quickstart(root, config=local_config)

@@ -2,8 +2,8 @@ from classes.banco import Banco
 
 class Formulario():
     """Documentação da classe
-    - aqui devemos descrever os objetivos da classe e suas funcionalidades
-    - toda classe deve ter uma responsabilidade única (PGR) e possui propriedades e métodos
+    - Descrever os objetivos da classe e suas funcionalidades
+    - Toda classe deve ter uma responsabilidade única (PGR), possui propriedades e métodos
     """
     # Toda classe precisa ter o construtor
     def __init__(self):
@@ -90,10 +90,10 @@ class Formulario():
         return self.__banco.executarSelect(sql)
 
     def gravar(self): # Pegar os dados do objeto e gravar no banco de dados
-        sql =   """
+        sql =   f"""
                 insert into DB_Formulario (FORM_Nome, FORM_Idade, FORM_Telefone, FORM_Cidade, FORM_Endereco, FORM_Instituicao)
-                VALUES ("{}", "{}", "{}", "{}", "{}")
-                """.format(self.__nome, self.__idade, self.__telefone, self.__cidade, self.__endereco, self.__instituicao)
+                VALUES ("{self.__nome}", "{self.__idade}", "{self.__telefone}", "{self.__cidade}", "{self.__endereco}", "{self.__instituicao}")
+                """
         return self.__banco.executarInsertUpdateDelete(sql)
 
     def excluir(self): # Exluir o id que está no objeto do banco de dados
@@ -101,11 +101,9 @@ class Formulario():
         return self.__banco.executarInsertUpdateDelete(sql)
 
     def alterar(self):
-        sql =   """
+        sql =   f"""
                 update DB_Formulario
-                set FORM_Nome = "{}", FORM_Idade = "{}", FORM_Telefone = "{}", FORM_Cidade = "{}", FORM_Endereco = "{}", FORM_Instituicao = "{}"
-                where FORM_ID = {}
-                """.format(self.__nome, self.__idade, self.__telefone, self.__cidade, self.__endereco, self.__instituicao, self.__id)
+                set FORM_Nome = "{self.__nome}", FORM_Idade = "{self.__idade}", FORM_Telefone = "{self.__telefone}", FORM_Cidade = "{self.__cidade}", FORM_Endereco = "{self.__endereco}", FORM_Instituicao = "{self.__instituicao}"
+                where FORM_ID = {self.__id}
+                """
         return self.__banco.executarInsertUpdateDelete(sql)
-
-

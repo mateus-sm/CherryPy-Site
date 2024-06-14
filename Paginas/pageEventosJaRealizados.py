@@ -1,7 +1,7 @@
 import cherrypy
 import os
 
-#Chega em \CherryPy-Site
+# Chega em \CherryPy-Site
 abs_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 class PaginaEventos():

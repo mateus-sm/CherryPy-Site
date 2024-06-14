@@ -1,14 +1,14 @@
 import cherrypy
 import os
 
-#Chega em \CherryPy-Site #https://stackoverflow.com/questions/3430372/how-do-i-get-the-full-path-of-the-current-files-directory?noredirect=1&lq=1
+# Chega em \CherryPy-Site #https://stackoverflow.com/questions/3430372/how-do-i-get-the-full-path-of-the-current-files-directory?noredirect=1&lq=1
 abs_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 from classes.formulario import Formulario
 
 class PaginaInscricao():
     topo = open(abs_dir + "\\Site\\cabecalho.html", encoding='utf-8').read()
-    #conteudo = open(abs_dir + "\\Site\\Page02.html", encoding='utf-8').read()
+    conteudo = open(abs_dir + "\\Site\\Page02.html", encoding='utf-8').read()
     rodape = open(abs_dir + "\\Site\\rodape.html", encoding='utf-8').read()
 
     @cherrypy.expose()
@@ -18,114 +18,8 @@ class PaginaInscricao():
     def montaFormulario(self, pId = 0, pNome = "", pIdade = "", pTelefone = "", pCidade = "", pEndereco = "", pInstituicao = ""):
         html = self.topo
         # Formulario
-        html += """
-                <div class="Menu-Conteudo FlexSpaceBetween">
-
-                    <div class="Menu FlexColumnSpaceBetween" style="overflow: auto;">
-                        <div class="Voltar" style="background-color: #ffffff;">
-                            <h2 class="AnularMargem"><a href="/">Voltar</a></h2>
-                        </div>
-                    </div>
-
-                    <div class="Conteudo">
-
-                        <h1 style="display: flex; justify-content: center; align-items: center;">Formulario</h1>
-
-                        <div class="evento">
-                            <form name="inscircao" action="gravarFormulario" method="post">
-                                <div class="FlexColumnSpaceBetween">
-
-                                    <div style="margin: auto;">
-                                        <h3>Dados pessoais:</h3>
-                                    </div>
-                                    </br>
-
-                                    <input type="hidden" id="txtId" name="txtId" value="%s"/>
-                                    <div class="FlexSpaceBetween">
-
-                                        <div style="margin-right: 50px;">
-                                            <label for="txtNome">Nome: </label>
-                                            <input type="text" id="txtNome" name="txtNome" value="%s" size="30" maxlength="30">
-                                        </div>
-                                        
-                                        <div>
-                                            <label for="txtIdade">Idade: </label>
-                                            <input type="text" id="txtIdade" name="txtIdade" value="%s" size="30" maxlength="30">
-                                        </div>
-
-                                    </div>
-                                    </br>
-
-                                    <div style="margin: auto;">
-                                        <div>
-                                            <label for="txtTelefone">Telefone: </label>
-                                            <input type="text" id="txtTelefone" name="txtTelefone" value="%s" size="30" maxlength="30">
-                                        </div>
-                                    </div>
-                                    </br>
-                                    
-                                </div>
-                                </br>
-
-                                <div class="FlexColumnSpaceBetween">
-
-                                    <div style="margin: auto;">
-                                        <h3>Seção de endereço:</h3>
-                                    </div>
-                                    </br>
-
-                                    <div style="margin: auto;">
-                                        <div>
-                                            <label for="txtCidade">Cidade: </label>
-                                            <input type="text" id="txtCidade" name="txtCidade" value="%s" size="30" maxlength="30">
-                                        </div>
-                                    </div>
-                                    </br>
-
-                                    <div style="margin: auto;">
-                                        <div>
-                                            <label for="txtEndereco">Endereço: </label>
-                                            <input type="text" id="txtEndereco" name="txtEndereco" value="%s" size="30" maxlength="30">
-                                        </div>
-                                    </div>
-                                    </br>
-
-                                </div>
-                                </br>
-
-                                <div class="FlexColumnSpaceBetween">
-
-                                    <div style="margin: auto;">
-                                        <h3>Participação do evento:</h3>
-                                    </div>
-                                    </br>
-
-                                    <div style="margin: auto;">
-                                        <label for="txtInstituicao">Instituição de ensino: </label>
-                                        <input type="text" id="txtInstituicao" name="txtInstituicao" value="%s" size="30" maxlength="30">
-                                    </div>
-                                    </br>
-
-                                </div>
-                                </br>
-
-                                <div class="buttons">
-
-                                    <div>
-                                        <input type="submit" id="btnGravar" name="btnGravar" value="Gravar">
-                                    </div>
-                                    </br>
-
-                                    <div>
-                                        <a href="limparFormulario">
-                                            <input id="btnLimpar" type="button" value="Limpar">
-                                        </a>
-                                    </div>
-
-                                </div>
-                            </form>
-                        </div>
-                """ % (pId, pNome, pIdade, pTelefone, pCidade, pEndereco, pInstituicao)
+        html += self.conteudo.replace("{ID}", str(pId)).replace("{Nome}", pNome).replace("{Idade}", str(pIdade)).replace("{Telefone}", pTelefone).replace("{Cidade}", pCidade).replace("{Endereco}", pEndereco).replace("{Instituicao}", pInstituicao)
+        # Tabela
         html += self.montaTabela()
         html += self.rodape
         return html
@@ -149,21 +43,21 @@ class PaginaInscricao():
         objForm = Formulario() # Criar um objeto do tipo Formulario (Instanciar um objeto)
         dados = objForm.obterRegistros() # Retorna uma lista de tuplas com todos os registros gravados no banco de dados
         for reg in dados: # Percorre a lista e gerar o HTML de cada linha da tabela com os dados
-            html += """
+            html += f"""
                     <tr>
-                        <td> %s </td>
-                        <td> %s </td>
-                        <td> %s </td>
-                        <td> %s </td>
-                        <td> %s </td>
-                        <td> %s </td>
-                        <td> %s </td>
+                        <td> {reg["FORM_ID"]} </td>
+                        <td> {reg["FORM_Nome"]} </td>
+                        <td> {reg["FORM_Idade"]} </td>
+                        <td> {reg["FORM_Telefone"]} </td>
+                        <td> {reg["FORM_Cidade"]} </td>
+                        <td> {reg["FORM_Endereco"]} </td>
+                        <td> {reg["FORM_Instituicao"]} </td>
                         <td style="text-align:center">
-                            <a href="excluirFormulario?idFor=%s">[Excluir]</a>
-                            <a href="alterarFormulario?idFor=%s">[Alterar]</a>
+                            <a href="excluirFormulario?idFor={reg["FORM_ID"]}">[Excluir]</a>
+                            <a href="alterarFormulario?idFor={reg["FORM_ID"]}">[Alterar]</a>
                         </td>
                     </tr>
-                    """ % (reg["FORM_ID"], reg["FORM_Nome"], reg["FORM_Idade"], reg["FORM_Telefone"], reg["FORM_Cidade"], reg["FORM_Endereco"], reg["FORM_Instituicao"], reg["FORM_ID"], reg["FORM_ID"])
+                    """
 
         html += """
                         </table><br><br><br>
@@ -175,7 +69,8 @@ class PaginaInscricao():
 
     @cherrypy.expose()
     def gravarFormulario(self, txtId, txtNome, txtIdade, txtTelefone, txtCidade, txtEndereco, txtInstituicao, btnGravar):
-        if len(txtNome) > 0: # A descrição não está vazia
+        if len(txtNome) >= 0 and (txtIdade.isdigit() or len(txtIdade) >= 0) and (txtTelefone.isdigit() or len(txtTelefone) >= 0):
+            # A descrição não está vazia e os int são validos
             objForm = Formulario()
             objForm.set_nome(txtNome)
             objForm.set_idade(txtIdade)
@@ -184,27 +79,39 @@ class PaginaInscricao():
             objForm.set_endereco(txtEndereco)
             objForm.set_instituicao(txtInstituicao)
             
-            retorno = 0 # Variável para controlar se o comando foi executado com sucesso!!
+            retorno = 0 # Variável para controlar se o comando foi executado com sucesso
             if int(txtId) == 0: # É um novo registro no banco
                 retorno = objForm.gravar()
             else: # Registro já existe na tabela, fazer apenas a alteração
                 objForm.set_id(int(txtId))
                 retorno = objForm.alterar()
             if retorno > 0: # Gravação no banco OK
-                return  """
-                        <h2>O Cadastro <b>%s</b> foi gravado com sucesso!!</h2>
+                return  f"""
+                        <h2>O Cadastro <b>{txtNome}</b> foi gravado com sucesso!!</h2>
                         <a href="/rotaInscricao">voltar</a>
-                        """ % (txtNome)
+                        """
+            else:
+                return  f"""
+                        <h2>Erro ao gravar o Form <b>{txtNome}</b></h2>
+                        <a href="/rotaInscricao">voltar</a>
+                        """
+        else: # Descrição está vazia ou Idade/Telefone invalidos
+            if (len(txtNome) < 0):
+                return  """
+                        <h2>O Nome precisa ser informado!!</h2>
+                        <a href="/rotaInscricao">voltar</a>
+                        """
+            elif not txtIdade.isdigit():
+                return  """
+                        <h2>Idade Invalida!!</h2>
+                        <a href="/rotaInscricao">voltar</a>
+                        """
             else:
                 return  """
-                        <h2>Erro ao gravar o Form <b>%s</b></h2>
+                        <h2>Telefone Invalido!!</h2>
                         <a href="/rotaInscricao">voltar</a>
-                        """ % (txtNome)
-        else: # descrição está vazia
-            return  """
-                    <h2>O Nome precisa ser informado!!</h2>
-                    <a href="/rotaInscricao">voltar</a>
-                    """
+                        """
+
         
     @cherrypy.expose()
     def excluirFormulario(self, idFor):
@@ -221,7 +128,7 @@ class PaginaInscricao():
     @cherrypy.expose()
     def alterarFormulario(self, idFor):
         objForm = Formulario()
-        # Buscar no banco de dados a espécie com o id que foi selecinada na tabela
+        # Buscar no banco de dados a espécie com o ID que foi selecinada na tabela
         dadosFormularioSelect = objForm.obterRegistroE(idFor)
         # Colocar os dados que retornaram do SQL nos inputs do formuário
         return self.montaFormulario(dadosFormularioSelect[0]["FORM_ID"], dadosFormularioSelect[0]["FORM_Nome"], dadosFormularioSelect[0]["FORM_Idade"], dadosFormularioSelect[0]["FORM_Telefone"], dadosFormularioSelect[0]["FORM_Cidade"], dadosFormularioSelect[0]["FORM_Endereco"], dadosFormularioSelect[0]["FORM_Instituicao"])
