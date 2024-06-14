@@ -1,5 +1,5 @@
 /*CSS GERAL*/
-*{
+* {
     margin: 0em;
     padding: 0em;
     box-sizing: border-box;
@@ -7,7 +7,7 @@
 
 body {
     background: #f5f5f5;
-    font-family: Arial, sans-serif; /* Adicione uma fonte padrão */
+    font-family: Arial, sans-serif;
 }
 
 .paragrafo {
@@ -17,7 +17,7 @@ body {
 }
 
 .borda-hidden {
-    border-radius: 10px; 
+    border-radius: 10px;
     overflow: hidden;
 }
 
@@ -48,7 +48,7 @@ body {
     justify-content: space-between;
 }
 
-* a, a:visited{
+* a, a:visited {
     color: black;
     text-decoration: none;
 }
@@ -59,7 +59,7 @@ body {
     flex-direction: column;
     margin-left: auto;
     margin-right: auto; 
-    max-width: 100%; /* Defina uma largura máxima para evitar que o conteúdo fique muito largo em telas grandes */
+    max-width: 100%;
     padding-left: 200px;
     padding-right: 200px;
     border: 2px solid rgb(0, 0, 0);
@@ -75,11 +75,12 @@ body {
 .Botoes-Principais div {
     border: 2px solid black;
     text-align: center;
-    width: 33.33%; /* para evitar problemas com espaçamentos */
-    margin: 5px; /* Adicione um espaçamento entre os botões */
+    width: 33.33%;
+    margin: 5px;
     padding: 10px;
-    background-color: #008cff93; /* Adicione uma cor de fundo */
-    cursor: pointer; /* Mude o cursor ao passar o mouse */
+    background-color: #008cff93;
+    cursor: pointer;
+    overflow: auto;
 }
 
 .Menu-Conteudo {
@@ -88,10 +89,11 @@ body {
 
 .Menu {
     width: 20%;
-    height: 600px; /* Reduza a altura para um tamanho mais gerenciável */
+    height: 600px;
     border: 2px solid rgb(0, 0, 0);
     padding: 10px;
     background-color: #008cff93;
+    overflow: auto;
 }
 
 .Menu-texto {
@@ -99,7 +101,7 @@ body {
     overflow: auto;
 }
 
-.menu-texto-links{
+.menu-texto-links {
     font-size: 20px;
     padding-bottom: 10px;
     font-weight: bold;
@@ -107,7 +109,7 @@ body {
 
 .Conteudo {
     width: 80%;
-    height: 600px; /* Ajuste a altura para corresponder ao menu */
+    height: 600px;
     overflow-y: auto;
     border: 2px solid rgb(0, 0, 0);
     padding: 10px;
@@ -123,10 +125,10 @@ body {
 }
 
 .Footer {
-    /*width: 100%; Remover por causa de espaço a mais*/
     height: 150px;
     border: 3px solid black;
     background-color: #63c44f;
+    overflow: auto;
 }
 
 .Botoes-Footer div {
@@ -207,21 +209,6 @@ hr {
 
 input[type="text"] {
     margin-left: 15px;
-    border: solid #E9EDF1;
-    border-radius: 5px;
-}
-
-input[type="radio"] {
-    margin-left: 15px;
-    border: solid #E9EDF1;
-    border-radius: 10px;
-}
-
-input[type="file"] {
-    margin-left: 15px;
-}
-
-input[type="tel"] {
     border: solid #E9EDF1;
     border-radius: 5px;
 }

@@ -29,7 +29,7 @@ class PaginaInscricao():
         html =  """
                 <br>
                 <h1 style="display: flex; justify-content: center; align-items: center;">SQL</h1>
-                <table class="evento" style="width: fit-content;margin: auto;">
+                <table class="evento" style="width: fit-content; margin: auto;">
                     <tbody style="width: 100%; margin: auto;"><tr>
                         <th> Código </th>
                         <th> Nome </th>
