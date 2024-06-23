@@ -1,9 +1,10 @@
 # Trabalho Ambientes de Programação - Segundo Bimestre
-Repositório destinado a resolver e documentar o trabalho de Ambientes de Programação proposto no Segundo Bimeste de 2024.
+Repositório destinado a resolver e documentar o trabalho de Ambientes de Programação proposto no Segundo Bimestre de 2024.
 
 # Avaliação:
   Arquivo enviado para avaliação: hash e9c6ff5  
-  Nota:
+  Nota: 9.0
+  Feedback: Melhorar a apresentação do site.
 
 # Pontos principais:
 - Usar HTML, Python, CherryPy e SQL para fazer um formulário de forma dinâmica. 
