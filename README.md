@@ -3,7 +3,7 @@ Repositório destinado a resolver e documentar o trabalho de Ambientes de Progra
 
 # Avaliação:
   Arquivo enviado para avaliação: hash e9c6ff5  
-  Nota: 9.0
+  Nota: 9.0  
   Feedback: Melhorar a apresentação do site.
 
 # Pontos principais:
